@@ -5,13 +5,47 @@
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
 ## 🎯 Abstract & Research Context
-In academic research, literature synthesis and research gap discovery suffer from high human cognitive fatigue. This project introduces an autonomous, multi-agent pipeline built using Google's Agent Development Kit (ADK) and the Gemini API. By isolating tasks across a sequential agent workflow, the framework systematically evaluates academic publications to identify under-explored research anomalies without context rot.
+In academic research, literature synthesis and comprehensive background reviews demand significant cognitive effort and are prone to context degradation across large reading volumes. This project introduces an autonomous multi-agent framework built using Google's Agent Development Kit (ADK) and the Gemini API. By decomposing complex analytical tasks into a sequential agent workflow, the framework systematically evaluates academic publications to map out unaddressed research questions while maintaining strict context boundaries.
 
 ## 🧬 System Architecture
-The framework employs a strict sequential pipeline consisting of three specialized, decoupled agents acting as a logical conveyor belt:
-1. **PaperSearchAgent (Retrieval):** Responsible for executing programmatic queries and extracting relevant academic literature datasets.
-2. **SummaryAgent (Synthesis):** Parses complex technical structures, isolating core methodologies, datasets, and performance evaluation metrics.
-3. **ResearchGapAgent (Analysis):** Critically cross-references findings to highlight unresolved questions, dataset limitations, and future work opportunities.
+The framework partitions literature exploration into an isolated pipeline of three specialized, decoupled agents operating in a strict data sequence:
+
+1. **PaperSearchAgent (Retrieval):** Executes targeted query logic, handles domain filtering, and extracts relevant publication datasets.
+2. **SummaryAgent (Synthesis):** Parses complex technical structures to isolate distinct methodologies, baseline datasets, and performance evaluation metrics.
+3. **ResearchGapAgent (Analysis):** Cross-references extracted study parameters to identify open challenges, dataset limitations, or structural contradictions in the current literature.
 
 ```text
-[START] ──> PaperSearchAgent ──> SummaryAgent ──> ResearchGapAgent ──> [Discovered Gaps]
+[START] ──> PaperSearchAgent ──> SummaryAgent ──> ResearchGapAgent ──> [Identified Research Gaps]
+
+
+🚀 Installation & Local Execution
+Ensure your environment is configured with Python 3.13+ and that framework dependencies are correctly installed.
+# 1. Clone the repository
+git clone https://github.com/tahsin1017/LitReview-AI-2.0.git
+cd LitReview-AI-2.0
+
+# 2. Install the core Google Agent Development Kit framework
+pip install google-adk
+
+# 3. Configure environment variables (Using environment control to protect secrets)
+export GEMINI_API_KEY="your_api_key_here"
+
+# 4. Run the validation pipeline locally
+python main.py
+
+
+🎥 System Walkthrough & Output Verification
+A 45-second execution walkthrough demonstrating code compilation, pipeline instantiation, and terminal logs is available here:
+
+👉 Watch the Live Demo Pipeline Execution on YouTube
+
+🎓 Academic Citations & Project Genesis
+This framework was developed as a production-grade multi-agent architectural implementation for the Google AI Agents: Intensive Vibe Coding Capstone Project (June 2026).
+@software{Rafi_LitReview_AI_2026,
+  author = {Tahsin Ahmed Rafi},
+  title = {LitReview-AI 2.0: Multi-Agent Research Gap Discovery Framework},
+  year = {2026},
+  publisher = {GitHub},
+  journal = {GitHub Repository},
+  url = {https://github.com/tahsin1017/LitReview-AI-2.0}
+}
